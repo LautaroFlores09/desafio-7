@@ -1,0 +1,186 @@
+.footer{
+      display: flex;
+      justify-content: space-around;
+      background-color: black;
+      max-width: 100%;
+      padding: 90px 0 50px 30px;
+      border-bottom: 2px solid rgb(132, 0, 205);
+      font-family:Rotunda ;
+      font-style: light;
+      color:#8400cd ; 
+      box-shadow:rgba(132, 0, 205, 0.4) 0px 50px 200px -18px inset;
+ 
+      &__footerperifericwar{
+           margin-left: 100px;
+ 
+           &-titulo{
+                color:$color3;
+                font-family: $fontdraco;
+                font-size: 10px;
+                margin-bottom: 30px;
+            }
+            &-lista{
+                color:$color3;
+                font-family: $fontrotunda;
+                font-size: 15px;
+                margin-bottom: 30px;
+ 
+                &-item{
+                     padding: 0;
+                     a{
+                          text-decoration: none;
+                          color:$color1;
+                     }
+                } 
+            }
+            &-copy{
+                font-size: 13px;
+                margin-top:100px ;
+           } 
+ 
+      }
+      &__cys{
+           display: flex;
+           flex-direction: column;
+ 
+           &-titulo{
+                color: $color3;
+                font-family: $fontdraco;
+                font-size: 10px;
+                margin-bottom: 30px; 
+            } 
+            &-telefono,
+            &-contacto,
+            &-nosotros{
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 15px;
+            }
+           .footer__cys-contacto-titulo,
+           .footer__cys-nosotros-titulo,
+           .footer__cys-telefono-numero{
+            font-size: 16px;
+            margin: 0px 0 0 5px;
+            }
+ 
+      }
+      &__seguinos{
+           padding: 0px 0 50px 30px;
+           margin-right: 150px;
+           &-titulo{
+                color:$color3;
+                font-family:$fontdraco;
+                font-size: 10px;
+                margin-bottom: 30px; 
+          } 
+          i{
+               padding: 20px;
+               border-radius: 1000px;
+               margin: 2px;
+               color:$color3;
+          } 
+      }
+ }
+
+ $redes: (
+     twitter: #00acee,
+     instagram: #ff0080 ,
+     facebook:  #3b5998,
+     whatsapp:  #00bb2d
+ );
+ @each $redsocial, $colordered in $redes {
+     .bi-#{$redsocial} {
+         background-color: $colordered;
+     }
+ }
+
+ @media(max-width:1050px){
+      .footer{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+      
+           &__footerperifericwar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-items: center;
+                padding: auto;
+                margin: auto;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #8400cd;
+ 
+                &-titulo{
+                     text-align: center;
+                }
+                &-lista{
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     text-align: center;
+                     padding: 0;
+ 
+                     &-item{
+                          margin: 0;
+                          margin-bottom: 15px;
+                     }
+                }
+                &-copy{
+                     margin-top: 50px;
+                     margin-bottom: 30px;
+                }    
+           }
+           &__cys{
+                border-bottom: 2px solid #8400cd;
+                .footer__cys-titulo{
+                     text-align: center;
+                     
+                }
+                .footer__cys-telefono,
+                .footer__cys-contacto,
+                .footer__cys-nosotros{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                }
+                .footer__cys-telefono-item,
+                .footer__cys-contacto-item,
+                .footer__cys-nosotros-item{
+                margin-bottom: 10px;
+                }
+ 
+           }
+           &__seguinos{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                align-items: center;
+                padding: 0;
+                margin: auto;
+                margin-bottom: 30px;
+                margin-top: 30px;
+ 
+                &-item{
+                     margin: auto;
+                } 
+           }
+      }
+ }
+ @media(max-width:925px){
+     &__seguinos-item{
+           margin-left: 15px;
+      }
+ }
+ @media(max-width:470px){
+      .footer{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           padding: 50px 0 0 0;
+       }
+ }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://github.com/LautaroFlores09/desafio-7/sitemap.txt
